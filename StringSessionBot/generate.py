@@ -39,7 +39,7 @@ async def main(_, msg):
 
 async def generate_session(bot, msg, telethon=False):
     await msg.reply(
-        "- يـتم الان بـدأ صـنـع الـكود {}...".format(
+        "تم بدء  {} استخراج الجلسة...".format(
             "Telethon" if telethon else "Pyrogram"
         )
     )
