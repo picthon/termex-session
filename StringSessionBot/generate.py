@@ -156,7 +156,7 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} كود الجلسة** \n\n`{}` \n\مستخرج من @a_t_9".format(
+    text = "**{} كود الجلسة** \n\n`{}` \n\تـم بـنـجـاح الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة n\n\ Dev:  @a_t_9".format(
 "تليثون" if telethon else "بايروجرام", string_session
     )
     try:
@@ -165,7 +165,7 @@ async def generate_session(bot, msg, telethon=False):
         pass
     await client.disconnect()
     await phone_code_msg.reply(
-        "تم استخراج {} الجلسة. \n\nيرجى تفحص الرسائل المحفوظة! \n\nمن @a_t_9".format(
+        "تم استخراج {} الجلسة. \n\n تـم بـنـجـاح الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة n\n\ Dev:  @a_t_9 \n\n".format(
             "telethon" if telethon else "pyrogram"
         )
     )
