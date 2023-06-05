@@ -187,7 +187,7 @@ async def cancelled(msg):
         )
         return True
     elif msg.text.startswith("/"):  # Bot Commands
-        await msg.reply("تم إلغاؤه!", quote=True)
+        await msg.reply("تم الغاء الجلسة السابقة", quote=True)
         return True
     else:
         return False 
