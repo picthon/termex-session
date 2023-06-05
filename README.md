@@ -2,7 +2,7 @@
 
 Thia Bot Will Allow You To Generate Pyrogram And Telethon String For Telegram Developed  ❤️
 
-<p align="center"><a href="https://t.me/a_t_9"><img src="https://telegra.ph/file/27bfcfbb9d72fb3f3a1ca.jpg" width="300"></a></p>
+<p align="center"><a href="https://t.me/a_t_9"><img src="https://graph.org/file/d437a98541b78d134c371.jpg" width="300"></a></p>
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&colosr=red" /></a>
     <a href="https://github.com/TheTeamAlexa/Session_Robot/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a>
