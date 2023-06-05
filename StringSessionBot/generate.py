@@ -30,7 +30,7 @@ async def main(_, msg):
             [
                 [
                     InlineKeyboardButton("بايروجرام ❍", callback_data="pyrogram"),
-                    InlineKeyboardButton("تليثون ❍", callback_data="telethon"),
+                    InlineKeyboardButton("تيليثون ❍", callback_data="telethon"),
                 ]
             ]
         ),
@@ -72,7 +72,7 @@ async def generate_session(bot, msg, telethon=False):
     if await cancelled(api_id_msg):
         return
     phone_number = phone_number_msg.text
-    await msg.reply("جاري إرسال الكود انتظر قليلًا لطفًا ♥️...")
+    await msg.reply("- اࢪسـل لـي الـكـود...")
     if telethon:
         client = TelegramClient(StringSession(), api_id, api_hash)
     else:
@@ -96,7 +96,7 @@ async def generate_session(bot, msg, telethon=False):
         )
         return
     try:
-        phone_code_msg = await bot.ask(user_id, "[ارسل الكود مثل اللي في الصورة ](https://telegra.ph/file/da1af082c6b754959ab47.jpg)»  🔍من فضلك افحص حسابك بالتليجرام وتفقد الكود من حساب إشعارات التليجرام. إذا كان\n  هناك تحقق بخطوتين( المرور ) ، أرسل كلمة المرور هنا بعد إرسال كود الدخول بالتنسيق أدناه.- إذا كانت كلمة المرور او الكود  هي\n 12345 يرجى إرسالها بالشكل التالي 1 2 3 4 5 مع وجود مسـافـات بين الارقام إذا احتجت مساعدة @a_t_9.", filters=filters.text, timeout=600)
+        phone_code_msg = await bot.ask(user_id, "- حـسـنًا تـم اࢪسـال كـود الـتحـقـق الـيك مـن قِـبـل تـيـليـكرام   الان انـسـخ الـكود وضـع مـسافـه مـا بـين كـل ࢪقـم هـكذا  : 6 7 7 7 5.", filters=filters.text, timeout=600)
         if await cancelled(api_id_msg):
             return
     except TimeoutError:
@@ -156,7 +156,7 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} كود الجلسة** \n\n`{}` \n\مستخرج من @PICTH0N".format(
+    text = "**{} كود الجلسة** \n\n`{}` \n\Dev: @a_t_9".format(
 "تليثون" if telethon else "بايروجرام", string_session
     )
     try:
@@ -165,7 +165,7 @@ async def generate_session(bot, msg, telethon=False):
         pass
     await client.disconnect()
     await phone_code_msg.reply(
-        "تم استخراج {} الجلسة. \n\nيرجى تفحص الرسائل المحفوظة! \n\nمن @PICTH0N".format(
+        "تم استخراج {} الجلسة. \n\nيرجى تفحص الرسائل المحفوظة! \n\nمن Dev: @a_t_9".format(
             "telethon" if telethon else "pyrogram"
         )
     )
