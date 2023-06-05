@@ -45,12 +45,12 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         )
     elif query == "generate":
         await callback_query.message.reply(
-            "يرجى اختيار الجلسة المطلوبة إذا كنت تريد جلسة بايروجرام اختر بايروجرام وإذا كنت تريد تليثون اختر تيرمكس",
+            "يرجى اختيار الجلسة المطلوبة إذا كنت تريد جلسة بايروجرام اختر بايروجرام وإذا كنت تريد تليثون اختر تيليثون",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("بايروجرام", callback_data="pyrogram"),
-                        InlineKeyboardButton("تليثون", callback_data="telethon"),
+                        InlineKeyboardButton("بايࢪوجرام", callback_data="pyrogram"),
+                        InlineKeyboardButton("تيليثون", callback_data="telethon"),
                     ]
                 ]
             ),
