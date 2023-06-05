@@ -156,7 +156,7 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} كود الجلسة** \n\n`{}` \n/Dev: @a_t_9".format(
+    text = "**{} كود الجلسة** \n\n`{}` \n\n Dev:  @a_t_9".format(
 "تليثون" if telethon else "بايروجرام", string_session
     )
     try:
