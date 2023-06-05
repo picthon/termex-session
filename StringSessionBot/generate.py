@@ -165,7 +165,7 @@ async def generate_session(bot, msg, telethon=False):
         pass
     await client.disconnect()
     await phone_code_msg.reply(
-        "تم استخراج {} الجلسة. \n\nيرجى تفحص الرسائل المحفوظة! \n\nمن Dev: @a_t_9".format(
+        "تـم بـنـجـاح ارسـال الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة Dev:  @a_t_9".format(
             "telethon" if telethon else "pyrogram"
         )
     )
