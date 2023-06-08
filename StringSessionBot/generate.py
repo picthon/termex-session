@@ -39,7 +39,7 @@ async def main(_, msg):
 
 async def generate_session(bot, msg, telethon=False):
     await msg.reply(
-        "تم بدء  {} استخراج الجلسة...".format(
+        "- يـتم الان بـدأ صـنـع الـكود {}...".format(
             "Telethon" if telethon else "Pyrogram"
         )
     )
@@ -147,7 +147,7 @@ async def generate_session(bot, msg, telethon=False):
                 return
         except (PasswordHashInvalid, PasswordHashInvalidError):
             await two_step_msg.reply(
-                "التحقق بخطوتين الذي ادخلته خطأ يرجى إعادة الاستخراج مرة أخرى 🤍.",
+                "عـذرًا رمـز التـحقـق غيـر صـحـيح الـࢪجـاء الاسـتـخـࢪاج مـن جـديـد /start",
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
@@ -157,7 +157,7 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} Black session ** \n\n`{}` \n\n\ تـم بـنـجـاح اࢪسـال الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة  Dev:  @a_t_9".format(
-"telethon" if telethon else "PYROGRAM", string_session
+"TELETHON" if telethon else "PYROGRAM", string_session
     )
     try:
         await client.send_message("me", text)
@@ -166,7 +166,7 @@ async def generate_session(bot, msg, telethon=False):
     await client.disconnect()
     await phone_code_msg.reply(
         " {} Black session . \n\n تـم بـنـجـاح اࢪسـال الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة  Dev:  @a_t_9 \n\n".format(
-            "telethon" if telethon else "pyrogram"
+            "TELETHON" if telethon else "PYROGRAM"
         )
     )
 
@@ -181,7 +181,7 @@ async def cancelled(msg):
         return True
     elif "/restart" in msg.text:
         await msg.reply(
-            "تم ترسيت البوت!",
+            "تـم الانـتـه‍اء مـن التـࢪسيـت",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
