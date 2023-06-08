@@ -91,7 +91,7 @@ async def generate_session(bot, msg, telethon=False):
         return
     except (PhoneNumberInvalid, PhoneNumberInvalidError):
         await msg.reply(
-            "`PHONE_NUMBER` رقم الهاتف الخاص بك غير صحيح يرجى إعادة الاستخراج مرة أخرى ",
+            "رقـم الـهاتـف خـطـأ الـࢪجـاء الـتـأكد مـنه واعـادة الاسـتخـراج مـن جـديـد",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -101,7 +101,7 @@ async def generate_session(bot, msg, telethon=False):
             return
     except TimeoutError:
         await msg.reply(
-            "لقد تجاوزت الحد الزمني 10 دقائق أعد استخراج الجلسة مرة أخرى.",
+            "لـقـد تـجاوزت الـحـد الـزمـني 10 دقـائـق أعـد اسـتـخـࢪاج الـجلـسـة مـࢪة أخـࢪى.",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -113,13 +113,13 @@ async def generate_session(bot, msg, telethon=False):
             await client.sign_in(phone_number, code.phone_code_hash, phone_code)
     except (PhoneCodeInvalid, PhoneCodeInvalidError):
         await msg.reply(
-            " رقـم الـهاتـف خـطـأ الـࢪجـاء الـتـأكد مـنه واعـادة الاسـتخـراج مـن جـديـد ",
+            " ࢪقـم الـهاتـف خـطـأ الـࢪجـاء الـتـأكد مـنه واعـادة الاسـتخـراج مـن جـديـد ",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
     except (PhoneCodeExpired, PhoneCodeExpiredError):
         await msg.reply(
-            "الكود الذي أدخلته خاطئ يرجى إعادة الإستخراج مرة أخرى",
+            "كـود الـتحـقـق خـطأ الـࢪجـاء الاسـتـخࢪاج مـن جَديـد والـتـأكـد مـن وضـع مـسافـات بـين الاࢪقـام عـنـد اࢪسـال الـكود",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -133,7 +133,7 @@ async def generate_session(bot, msg, telethon=False):
             )
         except TimeoutError:
             await msg.reply(
-                "لقد تجاوزت المدة الزمنية يجب عليك إعادة استخراج الجلسة مرة أخرى",
+                "لقد انـته‍ـت مـه‍لة انـشاء الـجلـسة يـࢪجى اعـادة الـمـحاوله /start",
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
             return
@@ -181,13 +181,13 @@ async def cancelled(msg):
         return True
     elif "/restart" in msg.text:
         await msg.reply(
-            "تم ترسيت البوت!",
+            "تم الانـته‍ـاء مـن تـࢪسـيـت الـبوت!",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return True
     elif msg.text.startswith("/"):  # Bot Commands
-        await msg.reply("تم إلغاؤه!", quote=True)
+        await msg.reply("تم إلـغاء الـجلـسة!", quote=True)
         return True
     else:
         return False 
