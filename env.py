@@ -5,7 +5,7 @@ load_dotenv()
 
 API_ID = os.getenv("API_ID", "19645327").strip()
 API_HASH = os.getenv("API_HASH", "92de937beb2f87db08df95bcca0ac2d6").strip()
-BOT_TOKEN = os.getenv("BOT_TOKEN", "5922151848:AAEPDPAjd_fM_mAW1mMRhQ0OnNvA4X6mGoM").strip()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "6126926291:AAGBMAg8-ucKptuPnkblNdRl8xjXv_HBcRo").strip()
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 MUST_JOIN = os.getenv("MUST_JOIN", "https://t.me/PICTH0N")
 
