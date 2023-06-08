@@ -29,8 +29,8 @@ async def main(_, msg):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("بايروجرام ❍", callback_data="pyrogram"),
-                    InlineKeyboardButton("تيليثون ❍", callback_data="telethon"),
+                    InlineKeyboardButton("بـايـࢪوجـرام", callback_data="pyrogram"),
+                    InlineKeyboardButton("تـيلـيثـون", callback_data="telethon"),
                 ]
             ]
         ),
@@ -66,7 +66,7 @@ async def generate_session(bot, msg, telethon=False):
     api_hash = api_hash_msg.text
     phone_number_msg = await bot.ask(
         user_id,
-        "الآن أرسل رقم الهاتف الخاص بك`ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` مع كتابة ࢪمز الـدولـه. \nمثال : `+964xxxxxxxxxx`",
+        "الآن أرسل رقم الهاتف الخاص بك`𝘱𝘩𝘰𝘯𝘦_𝘯𝘶𝘮𝘣𝘦𝘳` مع كتابة ࢪمز الـدولـه. \nمثال : `+964xxxxxxxxxx`",
         filters=filters.text,
     )
     if await cancelled(api_id_msg):
@@ -113,7 +113,7 @@ async def generate_session(bot, msg, telethon=False):
             await client.sign_in(phone_number, code.phone_code_hash, phone_code)
     except (PhoneCodeInvalid, PhoneCodeInvalidError):
         await msg.reply(
-            " رقم الهاتف الخاص بك غير صحيح يرجى إعادة الاستخراج مرة أخرى ",
+            " رقـم الـهاتـف خـطـأ الـࢪجـاء الـتـأكد مـنه واعـادة الاسـتخـراج مـن جـديـد ",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -156,7 +156,7 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} كود الجلسة** \n\n`{}` \n\تـم بـنـجـاح الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة n\n\ Dev:  @a_t_9".format(
+    text = "**{} Black session ** \n\n`{}` \n\n\ تـم بـنـجـاح اࢪسـال الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة  Dev:  @a_t_9".format(
 "تليثون" if telethon else "بايروجرام", string_session
     )
     try:
@@ -165,7 +165,7 @@ async def generate_session(bot, msg, telethon=False):
         pass
     await client.disconnect()
     await phone_code_msg.reply(
-        "تم استخراج {} الجلسة. \n\n تـم بـنـجـاح الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة n\n\ Dev:  @a_t_9 \n\n".format(
+        " {} Black session . \n\n تـم بـنـجـاح اࢪسـال الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة  Dev:  @a_t_9 \n\n".format(
             "telethon" if telethon else "pyrogram"
         )
     )
@@ -174,7 +174,7 @@ async def generate_session(bot, msg, telethon=False):
 async def cancelled(msg):
     if "/cancel" in msg.text:
         await msg.reply(
-            "تم إلغاء استخراج الجلسة!",
+            "- تـم الـغاء عـملـية الاسـتـخـراج .",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
@@ -187,7 +187,7 @@ async def cancelled(msg):
         )
         return True
     elif msg.text.startswith("/"):  # Bot Commands
-        await msg.reply("تم إلغاؤه!", quote=True)
+        await msg.reply("- تـم الـغاء عـملـية الاسـتـخـراج .", quote=True)
         return True
     else:
         return False 
