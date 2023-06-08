@@ -157,7 +157,7 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} Black session ** \n\n`{}` \n\n\ تـم بـنـجـاح اࢪسـال الـكـود الـࢪجـاء الـتـأكـد مـن الرسـائل المحـفوظة  Dev:  @a_t_9".format(
-"تليثون" if telethon else "بايروجرام", string_session
+"telethon" if telethon else "PYROGRAM", string_session
     )
     try:
         await client.send_message("me", text)
